@@ -91,13 +91,33 @@ curl -X PUT -H "Content-Type: application/json" -d '{"name":"Updated Country", "
 ```bash
 curl -X DELETE http://localhost:8000/countries/<id>/
 ```
+curl --location 'http://127.0.0.1:8000/items/' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
 
-## Contributing
+    "name":"python"
+    
+    
+}'
 
-Contributions are welcome! If you find any issues or want to add new features, feel free to open a pull request.
+curl --location 'http://127.0.0.1:8000/items/' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
 
-## License
+    "name":"python"
+    
+    
+}'
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+curl --location --request PATCH 'http://127.0.0.1:8000/items/update/3/' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
 
+    "name":"kumar",
+    "description":"sath"
+    
+}'
 ---
